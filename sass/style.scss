@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@import "./normalize.scss";
+@import "compass";
+
+/* --------------------------------------------------
+  Skins
+-------------------------------------------------- */
+
+
+/* --------------------------------------------------
+  Mixins
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+ layout style
+-------------------------------------------------- */
+body{
+  font-size:12px;
+  line-height:1.5;
+  margin:0;
+  padding:0;
+  color:#333;
+  background-color:#f7f8f9;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+a,a:hover,a:visited{
+  color: #09c;
+  text-decoration: none;
+}
+
+.header{
+  width: 100%;
+  min-width: 920px;
+  height: 39px;
+  border-bottom: 1px solid #eee;
+  background-color:#fff;
+  @include pie-clearfix;
+}
+
+.siteTitle{
+  font-size: 20px;
+  font-weight: normal;
+  color: #09c;
+  margin: 5px 0 0 10px;
+  float: left;
+}
+
+.titleSupple{
+  float:left;
+  margin:12px 0 0 10px;
+}
+
+.author{
+  margin: 12px 10px 0 0;
+  float:right;
+}
+
+
+.content{
+  width: 920px;
+  margin: 50px auto 0;
+}
+
+.displaySec{
+  min-width: 640px;
+  min-height: 460px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+  float: left;
+}
+
+.stage{
+  min-width: 640px;
+  min-height: 460px;
+  background:url(../img/dropimages.png) no-repeat center center;
+}
+
+/* --- */
+.infoSecs{
+  width: 230px;
+  float: right;
+}
+
+
+.toggleSwitch{
+  width:100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  @include pie-clearfix;
+
+  li{
+    width: 49%;
+    height: 30px;
+    font-size:14px;
+    color: #09c;
+    line-height: 2;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #eee;
+    }
+
+  li:last-child{
+    border: none;
+  }
+
+  li.current{
+    background-color:#09c;
+    color: #fff;
+  }
+}
+
+
+.hl{
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.hlSupple{
+  font-size: 11px;
+  color: #999;
+}
+
+.infoContent{
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  @include pie-clearfix;
+}
+
+.colorInfoPanel{
+  width: 98px;
+  height: 98px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  float: left;
+}
+
+.colorInfoHex{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.historyList{
+  li{
+   margin-bottom: 10px;
+   @include pie-clearfix;
+  }
+}
+
+.colorPanel{
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  float: left;
+}
+
+.hex{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.gridInfoPanel{
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fcee21;
+  float: left;
+}
+
+.gridVal{
+  float:left;
+  margin-left:10px;
+}
+
+.val{
+  color: #09c;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+
+/* --------------------------------------------------
+  for extend
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+  Components
+-------------------------------------------------- */

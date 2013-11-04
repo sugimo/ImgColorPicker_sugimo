@@ -1,2 +1,2 @@
-ImgColorPicker_sugimo
-=====================
+ImgColorPicker
+==============

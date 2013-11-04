@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+  <title></title>
+  <!--[if lt IE 9]>
+  <script src="./js/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="./css_debug/style.css" media="all">
+  <meta property="og:title" content="" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="" />
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="siteTitle">ImageColorPicker</h1>
+    <p class="titleSupple">The analysis of the size and color of the image</p>
+    <p class="author">
+      <a href="/">Bootgraph.com</a>
+    </p>
+  </header>
+  <div class="content">
+    <div class="displaySec">
+      <div class="stage">
+        <canvas id="imageDisplayCanvas" width="0" height="0"></canvas><!--とりあえず読み込んだファイルはここに表示されますが、今のままだとフルサイズで表示されてしまいます-->
+        <input type="file" id="readImageFile" class="readImageFile"><!--このinputはdisplay: none;にして、下の.dragDropAreaにスタイルをつける感じです-->
+        <label for="readImageFile" class="dragDropArea"></label>
+      </div>
+    </div>
+
+    <div class="infoSecs">
+      <ul class="toggleSwitch" id="toggleSwitch">
+        <li class="current">Color</li>
+        <li>Grid</li>
+      </ul>
+      <section class="colorInfo infoSec" id="colorInfo">
+        <h1 class="hl">Current Color</h1>
+        <div class="infoContent"><!--borderはこのdiv classにつけるとよいかと思われます-->
+          <div class="colorInfoPanel" id="colorInfoPanel" style="background-color: #fff;"></div>
+          <p class="colorInfoHex" id="colorInfoHex">#fff</p>
+          <p class="colorInfoRGB">R:<span id="colorInfoR">255</span></p>
+          <p class="colorInfoRGB">G:<span id="colorInfoG">255</span></p>
+          <p class="colorInfoRGB">B:<span id="colorInfoB">255</span></p>
+        </div>
+      </section>
+
+      <section class="historyInfo infoSec" id="historyInfo">
+        <h1 class="hl">History</h1>
+        <p class="hlSupple">Added by clicking on the image</p>
+        <div class="infoContent"><!--borderはこのdiv classにつけるとよいかと思われます-->
+          <ul class="historyList">
+            <li>
+              <div class="colorPanel" style="background-color: #fff;"></div>
+              <p class="hex" style="color: #333;">#fff</p>
+              <p class="rgb">R:255 G:255 B:255</p>
+            </li>
+            <li>
+              <div class="colorPanel" style="background-color: #fff;"></div>
+              <p class="hex" style="color: #333;">#fff</p>
+              <p class="rgb">R:255 G:255 B:255</p>
+            </li>
+            <li>
+              <div class="colorPanel" style="background-color: #fff;"></div>
+              <p class="hex" style="color: #333;">#fff</p>
+              <p class="rgb">R:255 G:255 B:255</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="gridInfo infoSec" id="gridInfo">
+        <h1 class="hl">Grid</h1>
+        <div class="infoContent"><!--borderはこのdiv classにつけるとよいかと思われます-->
+          <div class="gridInfoPanel"></div>
+          <ul class="gridVal wh">
+            <li>W:<span class="val"><span id="gridW">120</span>px</span></li>
+            <li>H:<span class="val"><span id="gridH">120</span>px</span></li>
+          </ul>
+          <ul class="gridVal xy">
+            <li>X:<span class="val"><span id="gridX">420</span>px</span></li>
+            <li>Y:<span class="val"><span id="gridY">40</span>px</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <script src="./js/functions.js?d"></script>
+</body>
+</html>
